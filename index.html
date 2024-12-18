@@ -1,46 +1,137 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Portfolio by @naimul</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Naimul Hasan's Portfolio website">
     <meta name="author" content="Naimul">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portfolio by @naimul</title>
     <link rel="stylesheet" href="css/kube.min.css" />
     <link rel="stylesheet" href="css/font-awesome.min.css" />
     <link rel="stylesheet" href="css/custom.min.css" />
     <link rel="shortcut icon" href="img/favicon.png" />
-	<link href='https://fonts.googleapis.com/css?family=Playfair+Display+SC:700' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
-	<style>
+    <link href='https://fonts.googleapis.com/css?family=Playfair+Display:700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+    <style>
 		.intro h1:before {
 			/* Edit this with your name or anything else */
 			content:'NAIMUL';
 		}
 	</style>
+	<style>
+        body {
+            font-family: 'Lato', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            padding-top: 60px; /* Adjust for fixed navbar */
+        }
+
+        .main-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .main-nav h1 {
+            margin: 0;
+            padding: 10px;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        .main-nav nav ul {
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+        }
+		
+
+        .main-nav nav ul li {
+            list-style: none;
+            margin: 0 60px; /* Increased space between navigation items */
+        }
+
+		
+
+        .main-nav nav ul li {
+            list-style: none;
+            margin: 0 15px;
+        }
+
+        .main-nav nav ul li a {
+            text-decoration: none;
+            color: #333;
+            transition: color 0.3s;
+        }
+
+        .main-nav nav ul li a:hover {
+            color: blue; /* Change on hover */
+        }
+
+        section {
+            padding: 60px 20px; /* Padding for sections */
+        }
+
+        h1, h2 {
+            color: #2c3e50; /* Darker shade for headings */
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .intro img {
+            width: 200px;
+            height: auto;
+        }
+
+        .social {
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+        }
+
+        .social li {
+            margin: 0 10px;
+        }
+
+        footer {
+            background-color: #f8f8f8;
+            padding: 20px 0;
+            text-align: center;
+        }
+        
+        .quote {
+            background-color: #f0f8ff;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
 </head>
+
 <body>
+
 <!-- Navigation -->
-<div class="main-nav">
+<header class="main-nav">
     <div class="container">
-        <header class="group top-nav">
-            <div class="navigation-toggle" data-tools="navigation-toggle" data-target="#navbar-1">
-                <span class="logo"> Menu </span>
-            </div>
-            <nav id="navbar-1" class="navbar item-nav">
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#experiences">Experiences</a></li>
-                    <li><a href="#Publications">Publications</a></li>
-                    <li><a href="#achievements">Recent Projects</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                </ul>
-            </nav>
-        </header>
+        <h1>Naimul Hasan's Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#experiences">Experiences</a></li>
+                <li><a href="#Publications">Publications</a></li>
+                <li><a href="#achievements">Recent Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+            </ul>
+        </nav>
     </div>
-</div>
+</header>
 
 
 <!-- JavaScript -->
@@ -112,11 +203,8 @@ window.addEventListener('scroll', updateActiveLink);
 				</div>
 				<p>
 					<br>
-					I am a graduate researcher at the Smart Textiles and Nanotechnology Research Group at Colorado State University. Additionally, I work as a graduate teaching assistant in the Department of Design and Merchandising, where I teach the AM220 lab. My expertise lies in the areas of Wearables, Biosensors, Nanotechnology, Electro-spinning, and Composite materials. I earned my bachelor's degree in Textile Engineering from the Khulna University of Engineering & Technology in 2022, where I worked on Triboelectric Nanogenerator.  <br>
-<br>
- Currently, I am working closely with Dr. Li on various projects, with a primary focus on developing a human health monitoring system. One of our ongoing projects involves prototyping a colorimetric biosensor, and we are also exploring the use of CNC-based ECG sensors. Additionally, we are researching a drug delivery system utilizing electro-spun nano fibers.  <br>
-
-<br>
+					I am a graduate researcher at the Smart Textiles and Nanotechnology Research Group at Colorado State University. Additionally, I work as a graduate teaching assistant in the Department of Design and Merchandising, where I teach the AM220 lab. My expertise lies in the areas of Wearables, Biosensors, Nanotechnology, Electro-spinning, and Composite materials. I earned my bachelor's degree in Textile Engineering from the Khulna University of Engineering & Technology in 2022, where I worked on Triboelectric Nanogenerator.
+ Currently, I am working closely with Dr. Li on various projects, with a primary focus on developing a human health monitoring system. One of our ongoing projects involves prototyping a colorimetric biosensor, and we are also exploring the use of CNC-based ECG sensors. Additionally, we are researching a drug delivery system utilizing electro-spun nano fibers. 
 While pursuing these exciting projects, I am keeping my ultimate ambition in mind: to work on space suits. Therefore, I am actively involved in different fields within textile science to broaden my knowledge and skills in preparation for this goal.
 <br>
 <br>
@@ -138,22 +226,27 @@ While pursuing these exciting projects, I am keeping my ultimate ambition in min
 
 
 	<!-- Education -->
-	<div class="work section second" id="education" style="padding-top: 90px; margin-top: -90px;">
+	<div class="work section second" id="education" style="padding-top: 180px; margin-top: -180px;">
 		<div class="container">
+			<div style="display: flex;">
+
 			<h1>Education</h1>
-			<ul class="work-list">
+			<ul class="work-list" style="margin-left: 100px;">
 				<li>2023 - Present</li>
-				<li><a href="#">Colorado State University </a></li>
+				<li><a href="https://www.colostate.edu/">Colorado State University </a></li>
 				<li>Fort Collins, CO, USA</li>
 				<li>M.S. in Design and Merchandising</li>
 			</ul>
-			<ul class="work-list">
+
+		</div>
+			<ul class="work-list" style="margin-left: 302px;">
 				<li>2017 - 2022</li>
-				<li><a href="#">Khulna University of Engineering & Technology </a></li>
+				<li><a href="https://www.kuet.ac.bd/">Khulna University of Engineering & Technology </a></li>
 				<li>Khulna, Bangladesh</li>
 				<li>B.S. in Textile Engineering </li>
 			</ul>
 
+		
 		</div>
 	</div>
 
@@ -164,7 +257,7 @@ While pursuing these exciting projects, I am keeping my ultimate ambition in min
 
 
 	<!-- Work Experience -->
-	<div class="work section second" id="experiences" style="padding-top: 90px; margin-top: -90px;">
+	<div class="work section second" id="experiences" style="padding-top: 180px; margin-top: -180px;">
 		<div class="container">
 			<h1>Work<br>Experiences</h1>
 			<ul class="work-list">
@@ -247,10 +340,10 @@ While pursuing these exciting projects, I am keeping my ultimate ambition in min
 
 	
 	<!-- Publications -->
-	<div class="award section second" id="Publications" style="padding-top: 90px; margin-top: -90px;">
+	<div class="award section second" id="Publications" style="padding-top: 180px; margin-top: -180px;">
 		<div class="container">
 			<h1>Publications </h1>
-			<p> Citations: 132, h-index: 6, i-index: 5 &nbsp &nbsp &nbsp &nbsp <a href="https://scholar.google.com/citations?user=YvJGXZYAAAAJ&hl=en"> Google Scholar  </a>  </p>
+			<p> Citations: 132, h-index: 6 i-index: 5 &nbsp &nbsp &nbsp &nbsp <a href="https://scholar.google.com/citations?user=YvJGXZYAAAAJ&hl=en"> Google Scholar  </a>  </p>
 			<ul class="award-list list-flat">
 				<li>1.	Nayab-Ul-Hossain, A. K. M., Sela, S. K., Nehal, K., Hasan, N., Hossain, M. I., & Jalil, M. A. (2023). Application of green technology to treat fibrous (textile) waste and recycling of used chemicals for reutilization of similar waste. Cleaner Engineering and Technology, 13, 100625.<br>
 					<br> 2.	Hassan, M. N., Mondal, M. S., Hasan, N., Reza, M. M., Rahman, M. I., Sarkar, J., ... & Uddin, A. J. (2023). Evaluation of physico-mechanical properties of naturally dyed betel-nut leaf plate (BLPF)–Banana blended fabric. Heliyon, 9(2). <br>
@@ -269,7 +362,7 @@ While pursuing these exciting projects, I am keeping my ultimate ambition in min
 	</div>
 
 	<!-- Recent Projects -->
-	<div class="award section second" id="achievements" style="padding-top: 90px; margin-top: -90px;">
+	<div class="award section second" id="achievements" style="padding-top: 180px; margin-top: -180px;">
 		<div class="container">
 			<h1>Recent<br>Projects</h1>
 			<ul class="award-list list-flat">
@@ -302,7 +395,7 @@ While pursuing these exciting projects, I am keeping my ultimate ambition in min
 
 
 <!-- Award & Achievements -->
-<div class="award section second" id="achievements" style="padding-top: 90px; margin-top: -90px;">
+<div class="award section second" id="achievements" style="padding-top: 180px; margin-top: -180px;">
 	<div class="container">
 		<h1>Awards &amp;<br>Achievements</h1>
 		<ul class="award-list list-flat">
@@ -322,7 +415,7 @@ While pursuing these exciting projects, I am keeping my ultimate ambition in min
 </div>
 
 	<!-- Technical Skills -->
-	<div class="skills section second" id="skills" style="padding-top: 90px; margin-top: -90px;">
+	<div class="skills section second" id="skills" style="padding-top: 180px; margin-top: -180px;">
 		<div class="container">
 			<h1>Technical<br>Skills</h1>
 			<ul class="skill-list list-flat">
@@ -352,7 +445,9 @@ While pursuing these exciting projects, I am keeping my ultimate ambition in min
 	<!-- Quote -->
 	<div class="quote">
 		<div class="container text-centered">
-			<h1>Humans in space suits make monkeys nervous </h1>
+			<h1>            <span style="color: blue; background-color: rgba(255, 255, 255, 0.5); padding: 5px;">
+                Humans in space suits make monkeys nervous
+            </span></h1>
 		
 		</div>
 	</div>
