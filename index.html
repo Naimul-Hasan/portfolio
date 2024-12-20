@@ -26,7 +26,9 @@
             padding-top: 60px; /* Adjust for fixed navbar */
         }
 
-        .main-nav {
+       /* Navigation */
+       /* Navigation */
+       .main-nav {
             position: fixed;
             top: 0;
             left: 0;
@@ -34,43 +36,70 @@
             z-index: 1000;
             background-color: rgba(255, 255, 255, 0.9);
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 27px 20px;
         }
 
         .main-nav h1 {
             margin: 0;
-            padding: 10px;
-            font-size: 24px;
+            font-size: 30px;
             text-align: center;
+            width: 100%;
+        }
+
+        .main-nav nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin-top: 15px;
         }
 
         .main-nav nav ul {
             display: flex;
-            justify-content: center;
-            padding: 10px 0;
-        }
-		
-
-        .main-nav nav ul li {
+            justify-content: center; /* Center alignment */
+            align-items: center;
+            padding: 0;
+            margin: 0 0 0 80px; /* Move 5px to the right */
             list-style: none;
-            margin: 0 60px; /* Increased space between navigation items */
+            flex: 1;
         }
 
-		
-
         .main-nav nav ul li {
-            list-style: none;
             margin: 0 15px;
         }
 
         .main-nav nav ul li a {
             text-decoration: none;
             color: #333;
-            transition: color 0.3s;
+            transition: color 0.3s, text-decoration 0.3s;
+            font-size: 18px; /* Increased font size */
+            font-weight: normal; /* Added boldness for better visibility */
         }
 
         .main-nav nav ul li a:hover {
-            color: blue; /* Change on hover */
+            color: blue;
+            text-decoration: underline;
         }
+
+        .clock-container {
+            text-align: right;
+            color: #333;
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 1.2;
+        }
+
+        .clock-date {
+            display: block;
+        }
+
+        .clock-time {
+            display: block;
+        }
+        
 
         section {
             padding: 60px 20px; /* Padding for sections */
@@ -111,6 +140,9 @@
             padding: 20px;
             text-align: center;
         }
+
+    
+
     </style>
 </head>
 
@@ -118,20 +150,39 @@
 
 <!-- Navigation -->
 <header class="main-nav">
-    <div class="container">
-        <h1>Naimul Hasan's Portfolio</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#experiences">Experiences</a></li>
-                <li><a href="#Publications">Publications</a></li>
-                <li><a href="#achievements">Recent Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-            </ul>
-        </nav>
-    </div>
+    <h1>Naimul Hasan's Portfolio</h1>
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#experiences">Experiences</a></li>
+            <li><a href="#Publications">Publications</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#achievements">Awards</a></li>
+            <li><a href="#skills">Skills</a></li>
+        </ul>
+        <div class="clock-container" id="clock-container">
+            <span class="clock-date" id="clock-date"></span>
+            <span class="clock-time" id="clock-time"></span>
+        </div>
+    </nav>
 </header>
+
+<script>
+    function updateClock() {
+        const dateElement = document.getElementById('clock-date');
+        const timeElement = document.getElementById('clock-time');
+        const now = new Date();
+        const dateOptions = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' };
+        const timeOptions = { hour: '2-digit', minute: '2-digit', second: '2-digit' };
+
+        dateElement.textContent = now.toLocaleDateString('en-US', dateOptions);
+        timeElement.textContent = now.toLocaleTimeString('en-US', timeOptions);
+    }
+
+    setInterval(updateClock, 1000);
+    updateClock(); // Initialize clock immediately
+</script>
 
 
 <!-- JavaScript -->
@@ -479,7 +530,7 @@ I hold a Bachelor's degree in Textile Engineering from Khulna University of Engi
 	</div>
 
 	<!-- Recent Projects -->
-	<div class="award section second" id="achievements" style="padding-top: 180px; margin-top: -180px;">
+	<div class="award section second" id="projects" style="padding-top: 180px; margin-top: -180px;">
 		<div class="container">
 			<h1>Recent<br>Projects</h1>
 			<ul class="award-list list-flat">
